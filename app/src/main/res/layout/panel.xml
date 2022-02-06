@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Panel">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/headerAddCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/orange"
+                android:text="@string/addCategory"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonAddCategoryFilms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/headerAddCategory"
+                android:layout_marginTop="20dp"
+                android:text="@string/catalogFilms"
+                android:background="@color/orange"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonAddCategoryFantastic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/buttonAddCategoryFilms"
+                android:layout_marginTop="10dp"
+                android:text="@string/fantasticMovie"
+                android:background="@color/orange"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonAddCategoryAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/buttonAddCategoryFantastic"
+                android:layout_marginTop="10dp"
+                android:text="@string/animationMovie"
+                android:background="@color/orange"
+                android:textColor="@color/black"/>
+
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/headerAddMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/buttonAddCategoryAnimation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="60dp"
+                android:textColor="@color/orange"
+                android:text="@string/addMovie"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sectionEnterNameMovie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/headerAddMovie"
+                android:layout_margin="10dp"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@android:color/white"
+                app:startIconTint="@android:color/white"
+                app:endIconTint="@android:color/holo_red_light"
+                android:hint="@string/labelEnterNameMovie"
+                app:hintTextColor="@android:color/white"
+                app:startIconDrawable="@drawable/catalog_categories"
+                app:endIconMode="clear_text"
+                app:boxStrokeWidthFocused="4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enter_name_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@android:color/white"
+                    android:textCursorDrawable="@drawable/cursor"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sectionEnterCategoryMovie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/sectionEnterNameMovie"
+                android:layout_margin="10dp"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@android:color/white"
+                app:startIconTint="@android:color/white"
+                app:endIconTint="@android:color/holo_red_light"
+                android:hint="@string/labelEnterNumberCategory"
+                app:hintTextColor="@android:color/white"
+                app:startIconDrawable="@drawable/catalog_products"
+                app:endIconMode="clear_text"
+                app:boxStrokeWidthFocused="4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enter_category_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@android:color/white"
+                    android:textCursorDrawable="@drawable/cursor"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sectionEnterDurationMovie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/sectionEnterCategoryMovie"
+                android:layout_margin="10dp"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@android:color/white"
+                app:startIconTint="@android:color/white"
+                app:endIconTint="@android:color/holo_red_light"
+                android:hint="@string/labelEnterDurationMovie"
+                app:hintTextColor="@android:color/white"
+                app:startIconDrawable="@drawable/price"
+                app:endIconMode="clear_text"
+                app:boxStrokeWidthFocused="4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enterDurationMovie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@android:color/white"
+                    android:textCursorDrawable="@drawable/cursor"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/sectionResEnterMovie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/sectionEnterDurationMovie"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/resEnterNameMovie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/orange"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/resEnterCategoryMovie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/orange"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/resEnterDurationMovie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/orange"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonAddMovie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/sectionResEnterMovie"
+                android:layout_marginTop="20dp"
+                android:text="@string/addMovie"
+                android:background="@color/orange"
+                android:textColor="@color/black"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>
