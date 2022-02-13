@@ -6,49 +6,49 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mysqlretrofitrecyclermovie.R
+import com.example.mysqlretrofitrecyclermovie.databinding.MoviesItemBinding
 import com.fox.mysqlretrofitrecyclermovie.api.models.MoviesApiModel
-import com.example.mysqlretrofitrecyclermovie.databinding.ProductsItemBinding
 
 class MoviesAdapter(private val moviesList : ArrayList<MoviesApiModel>,
-                    private val deleteProduct:(Int)->Unit,
-                    private val editProduct:(MoviesApiModel)->Unit): RecyclerView.Adapter<MoviesAdapter.ProductsHolder>() {
+                    private val deleteMovie:(Int)->Unit,
+                    private val editMovie:(MoviesApiModel)->Unit): RecyclerView.Adapter<MoviesAdapter.MoviesHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductsHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val binding: ProductsItemBinding =
+        val binding: MoviesItemBinding =
             DataBindingUtil.inflate(layoutInflater, R.layout.movies_item, parent, false)
-        return ProductsHolder(binding)
+        return MoviesHolder(binding)
     }
 
     override fun getItemCount(): Int {
         return moviesList.size
     }
 
-    override fun onBindViewHolder(holder: ProductsHolder, position: Int) {
-        holder.bind(moviesList[position], deleteProduct, editProduct)
+    override fun onBindViewHolder(holder: MoviesHolder, position: Int) {
+        holder.bind(moviesList[position], deleteMovie, editMovie)
     }
 
-    class ProductsHolder(val binding: ProductsItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    class MoviesHolder(val binding: MoviesItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(
-            movies: MoviesApiModel, deleteProduct: (Int) -> Unit, editProduct: (MoviesApiModel) -> Unit
+            movies: MoviesApiModel, deleteMovie: (Int) -> Unit, editMovie: (MoviesApiModel) -> Unit
         ) {
 
-            val idProduct = movies.id
+            val idMovie = movies.id
 
-            binding.idProduct.text = idProduct.toString()
+            binding.idMovie.text = idMovie.toString()
 
-            binding.nameProduct.text = movies.name
-            binding.categoryProduct.text = movies.category
-            binding.priceProduct.text = movies.duration.toString()
+            binding.nameMovie.text = movies.name
+            binding.categoryMovie.text = movies.category
+            binding.ratingMovie.text = movies.rating.toString()
 
 
-            binding.editProduct.setOnClickListener(View.OnClickListener {
-                editProduct(movies)
+            binding.editMovie.setOnClickListener(View.OnClickListener {
+                editMovie(movies)
             })
 
-            binding.deleteProduct.setOnClickListener(View.OnClickListener {
-                deleteProduct(idProduct!!)
+            binding.deleteMovie.setOnClickListener(View.OnClickListener {
+                deleteMovie(idMovie!!)
             })
         }
 

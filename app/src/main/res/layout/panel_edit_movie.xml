@@ -80,7 +80,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/sectionEditDurationMovie"
+                android:id="@+id/sectionEditRatingMovie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/sectionEditCategoryMovie"
@@ -89,14 +89,14 @@
                 app:boxStrokeColor="@android:color/white"
                 app:startIconTint="@android:color/white"
                 app:endIconTint="@android:color/holo_red_light"
-                android:hint="@string/labelEnterDurationMovie"
+                android:hint="@string/labelEnterRatingMovie"
                 app:hintTextColor="@android:color/white"
                 app:startIconDrawable="@drawable/price"
                 app:endIconMode="clear_text"
                 app:boxStrokeWidthFocused="4dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editDurationMovie"
+                    android:id="@+id/edit_rating_movie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
@@ -110,7 +110,7 @@
                 android:id="@+id/sectionResEditMovie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/sectionEditDurationMovie"
+                app:layout_constraintTop_toBottomOf="@id/sectionEditRatingMovie"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
@@ -129,7 +129,7 @@
                     android:textColor="@color/black"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/resEditDurationMovie"
+                    android:id="@+id/res_edit_rating_movie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

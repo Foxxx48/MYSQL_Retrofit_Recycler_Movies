@@ -10,6 +10,6 @@ class MoviesApiModel (
     var name: String? = null,
     @SerializedName("category") @Expose
     var category: String? = null,
-    @SerializedName("price") @Expose
-    var duration: String? = null
+    @SerializedName("rating") @Expose
+    var rating: String? = null
 )

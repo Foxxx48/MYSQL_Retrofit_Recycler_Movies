@@ -41,8 +41,8 @@ class CatalogFilms : Fragment() {
 
     private fun loadFilms () {
 
-        val callGetFilms = ApiClient.instance?.api?.getMovieFilter(getString(R.string.catalogFilms),
-        getString(R.string.durationFilter))
+        val callGetFilms = ApiClient.instance?.api?.getMovieFilter(getString(R.string.catalogAction),
+        getString(R.string.ratingFilter))
         callGetFilms?.enqueue(object: Callback<ArrayList<MoviesApiModel>> {
             override fun onResponse(
                 call: Call<ArrayList<MoviesApiModel>>,
@@ -110,7 +110,7 @@ class CatalogFilms : Fragment() {
         parameters.putString("idMovie", moviesApiModel.id.toString())
         parameters.putString("nameMovie", moviesApiModel.name)
         parameters.putString("categoryMovie", moviesApiModel.category)
-        parameters.putString("durationMovie", moviesApiModel.duration)
+        parameters.putString("ratingMovie", moviesApiModel.rating)
         panelEditMovie.arguments = parameters
 
         panelEditMovie.show((context as FragmentActivity).supportFragmentManager, "editMovie")

@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/headerAddCategory"
                 android:layout_marginTop="20dp"
-                android:text="@string/catalogFilms"
+                android:text="@string/catalogAction"
                 android:background="@color/orange"
                 android:textColor="@color/black"/>
 
@@ -55,20 +55,16 @@
                 android:textColor="@color/black"/>
 
 
-
-
-
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/headerAddMovie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/buttonAddCategoryAnimation"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/addMovie"
                 android:textColor="@color/orange"
-                android:text="@string/addMovie"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonAddCategoryAnimation" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/sectionEnterNameMovie"
@@ -82,7 +78,7 @@
                 app:endIconTint="@android:color/holo_red_light"
                 android:hint="@string/labelEnterNameMovie"
                 app:hintTextColor="@android:color/white"
-                app:startIconDrawable="@drawable/catalog_categories"
+                app:startIconDrawable="@drawable/movies"
                 app:endIconMode="clear_text"
                 app:boxStrokeWidthFocused="4dp">
 
@@ -109,7 +105,7 @@
                 app:endIconTint="@android:color/holo_red_light"
                 android:hint="@string/labelEnterNumberCategory"
                 app:hintTextColor="@android:color/white"
-                app:startIconDrawable="@drawable/catalog_products"
+                app:startIconDrawable="@drawable/library_books"
                 app:endIconMode="clear_text"
                 app:boxStrokeWidthFocused="4dp">
 
@@ -124,7 +120,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/sectionEnterDurationMovie"
+                android:id="@+id/sectionEnterRatingMovie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/sectionEnterCategoryMovie"
@@ -133,14 +129,14 @@
                 app:boxStrokeColor="@android:color/white"
                 app:startIconTint="@android:color/white"
                 app:endIconTint="@android:color/holo_red_light"
-                android:hint="@string/labelEnterDurationMovie"
+                android:hint="@string/labelEnterRatingMovie"
                 app:hintTextColor="@android:color/white"
-                app:startIconDrawable="@drawable/price"
+                app:startIconDrawable="@drawable/access_time"
                 app:endIconMode="clear_text"
                 app:boxStrokeWidthFocused="4dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/enterDurationMovie"
+                    android:id="@+id/enter_rating_movie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number"
@@ -154,7 +150,7 @@
                 android:id="@+id/sectionResEnterMovie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/sectionEnterDurationMovie"
+                app:layout_constraintTop_toBottomOf="@id/sectionEnterRatingMovie"
                 android:layout_marginTop="20dp"
                 android:padding="10dp"
                 android:orientation="horizontal">
@@ -174,7 +170,7 @@
                     android:textColor="@color/orange"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/resEnterDurationMovie"
+                    android:id="@+id/res_enter_rating_movie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

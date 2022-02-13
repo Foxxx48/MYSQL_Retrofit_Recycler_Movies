@@ -30,13 +30,13 @@ class PanelEditMovie : BottomSheetDialogFragment(),View.OnKeyListener, View.OnCl
         binding = DataBindingUtil.inflate(inflater, R.layout.panel_edit_movie, container, false)
 
         idMovie = arguments?.getString("idMovie")?.toInt()
-        binding?.editNameMovie?.setText(arguments?.getString("nameProduct").toString())
+        binding?.editNameMovie?.setText(arguments?.getString("nameMovie").toString())
         binding?.editCategoryMovie?.setText(arguments?.getString("categoryMovie").toString())
-        binding?.editDurationMovie?.setText(arguments?.getString("durationMovie").toString())
+        binding?.editRatingMovie?.setText(arguments?.getString("ratingMovie").toString())
 
         binding?.editNameMovie?.setOnKeyListener(this)
         binding?.editCategoryMovie?.setOnKeyListener(this)
-        binding?.editDurationMovie?.setOnKeyListener(this)
+        binding?.editRatingMovie?.setOnKeyListener(this)
 
         binding?.buttonEditMovie?.setOnClickListener(this)
 
@@ -70,11 +70,11 @@ class PanelEditMovie : BottomSheetDialogFragment(),View.OnKeyListener, View.OnCl
 
             }
 
-            R.id.editDurationMovie -> {
+            R.id.edit_rating_movie -> {
                 if (keyEvent.action == KeyEvent.ACTION_DOWN && i == KeyEvent.KEYCODE_ENTER) {
 
-                    binding?.resEditDurationMovie?.text = binding?.editDurationMovie?.text
-                    binding?.editDurationMovie?.setText("")
+                    binding?.resEditRatingMovie?.text = binding?.editRatingMovie?.text
+                    binding?.editRatingMovie?.setText("")
 
                     return true
                 }
@@ -88,14 +88,14 @@ class PanelEditMovie : BottomSheetDialogFragment(),View.OnKeyListener, View.OnCl
     override fun onClick(view: View) {
 
         updateMovie(binding?.resEditNameMovie?.text?.toString()!!, binding?.resEditCategoryMovie?.text?.toString()!!,
-            binding?.resEditDurationMovie?.text?.toString()!!)
+            binding?.resEditRatingMovie?.text?.toString()!!)
     }
 
 
 
 
-    private fun updateMovie(name: String, category: String, duration: String) {
-        val callUpdateMovies = ApiClient.instance?.api?.updateMovie(idMovie.toString().toInt(), name, category, duration)
+    private fun updateMovie(name: String, category: String, rating: String) {
+        val callUpdateMovies = ApiClient.instance?.api?.updateMovie(idMovie.toString().toInt(), name, category, rating)
 
         callUpdateMovies?.enqueue(object : retrofit2.Callback<ResponseBody?> {
             override fun onResponse(call: Call<ResponseBody?>, response: Response<ResponseBody?>) {

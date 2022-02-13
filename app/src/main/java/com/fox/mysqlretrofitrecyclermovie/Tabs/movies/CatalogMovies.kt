@@ -114,7 +114,7 @@ class CatalogMovies : Fragment(),View.OnClickListener {
         parameters.putString("idMovie", moviesApiModel.id.toString())
         parameters.putString("nameMovie", moviesApiModel.name)
         parameters.putString("categoryMovie", moviesApiModel.category)
-        parameters.putString("durationMovie", moviesApiModel.duration)
+        parameters.putString("ratingMovie", moviesApiModel.rating)
         panelEditMovie.arguments = parameters
 
         panelEditMovie.show((context as FragmentActivity).supportFragmentManager, "editMovie")

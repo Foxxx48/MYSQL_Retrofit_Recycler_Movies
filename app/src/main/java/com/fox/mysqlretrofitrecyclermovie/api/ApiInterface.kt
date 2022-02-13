@@ -65,7 +65,7 @@ interface ApiInterface {
     fun getMovie(): Call<ArrayList<MoviesApiModel>>
 
     @GET("getMovieFilter.php")
-    fun getMovieFilter(@Query("category") category: String, @Query("duration") duration: String):
+    fun getMovieFilter(@Query("category") category: String, @Query("rating") rating: String):
             Call<ArrayList<MoviesApiModel>>
 
 }

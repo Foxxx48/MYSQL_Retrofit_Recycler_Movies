@@ -24,12 +24,14 @@ class MainActivity : AppCompatActivity() {
 
             when(item.itemId) {
                  R.id.panelItemBottomNav -> supportFragmentManager.beginTransaction().replace(R.id.content, Panel()).commit()
+
                  R.id.catalogMoviesItemBottomNav -> supportFragmentManager.beginTransaction().replace(
-                     R.id.content, CatalogMovies()
-                 ).commit()
-                 R.id.catalogClothesItemBottomNav -> supportFragmentManager.beginTransaction().replace(
+                     R.id.content, CatalogMovies()).commit()
+
+                 R.id.catalogFilmsItemBottomNav -> supportFragmentManager.beginTransaction().replace(
                      R.id.content, com.fox.mysqlretrofitrecyclermovie.Tabs.CatalogFilms()
                  ).commit()
+
                  R.id.catalogCategoriesItemBottomNav -> supportFragmentManager.beginTransaction().replace(
                      R.id.content, CatalogCategories()
                  ).commit()

@@ -32,7 +32,7 @@ class Panel : Fragment(),View.OnKeyListener,View.OnClickListener {
 
         binding?.enterNameMovie?.setOnKeyListener(this)
         binding?.enterCategoryMovie?.setOnKeyListener(this)
-        binding?.enterDurationMovie?.setOnKeyListener(this)
+        binding?.enterRatingMovie?.setOnKeyListener(this)
 
         binding?.buttonAddCategoryFilms?.setOnClickListener(this)
         binding?.buttonAddCategoryFantastic?.setOnClickListener(this)
@@ -65,10 +65,10 @@ class Panel : Fragment(),View.OnKeyListener,View.OnClickListener {
 
             }
 
-            R.id.enterDurationMovie -> {
+            R.id.enter_rating_movie-> {
                 if (keyEvent.action == KeyEvent.ACTION_DOWN && i == KeyEvent.KEYCODE_ENTER) {
-                    binding?.resEnterDurationMovie?.text = binding?.enterDurationMovie?.text
-                    binding?.enterDurationMovie?.setText("")
+                    binding?.resEnterRatingMovie?.text = binding?.enterRatingMovie?.text
+                    binding?.enterRatingMovie?.setText("")
                     return true
                 }
 
@@ -104,7 +104,7 @@ class Panel : Fragment(),View.OnKeyListener,View.OnClickListener {
 
                 insertMovie(binding?.resEnterNameMovie?.text?.toString(),
                      binding?.resEnterCategoryMovie?.text?.toString(),
-                     binding?.resEnterDurationMovie?.text?.toString())
+                     binding?.resEnterRatingMovie?.text?.toString())
 
                 clearResEnterMovie()
 
@@ -118,7 +118,7 @@ class Panel : Fragment(),View.OnKeyListener,View.OnClickListener {
     private fun clearResEnterMovie() {
         binding?.resEnterNameMovie?.setText("")
         binding?.resEnterCategoryMovie?.setText("")
-        binding?.resEnterDurationMovie?.setText("")
+        binding?.resEnterRatingMovie?.setText("")
 
     }
 
@@ -137,8 +137,8 @@ class Panel : Fragment(),View.OnKeyListener,View.OnClickListener {
     }
 
 
-    private fun insertMovie(name: String?, category: String?, duration: String?) {
-        val callInsertMovie: Call<ResponseBody?>? = ApiClient.instance?.api?.insertMovie(name, category, duration)
+    private fun insertMovie(name: String?, category: String?, rating: String?) {
+        val callInsertMovie: Call<ResponseBody?>? = ApiClient.instance?.api?.insertMovie(name, category, rating)
         callInsertMovie?.enqueue(object : Callback<ResponseBody?> {
             override fun onResponse(call: Call<ResponseBody?>, response: Response<ResponseBody?>) {
                 Toast.makeText(context, "ФИЛЬМ ДОБАВЛЕН", Toast.LENGTH_SHORT).show()

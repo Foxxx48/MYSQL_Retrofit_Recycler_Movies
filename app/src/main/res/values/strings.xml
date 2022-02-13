@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">MYSQL+Retrofit+Recycler_Movies</string>
-    <string name="panel">ПАНЕЛЬ</string>
+    <string name="home">ДОМАШНЯЯ</string>
     <string name="catalogMovies">ФИЛЬМЫ</string>
-    <string name="catalogFilms">FILMS</string>
+    <string name="catalogAction">БОЕВИК</string>
+    <string name="catalogFilters">ФИЛЬТР</string>
     <string name="catalogCategories">КАТЕГОРИИ</string>
 
-    <string name="durationFilter">120 min</string>
+    <string name="ratingFilter">7</string>
 
 
     <string name="addCategory">ДОБАВИТЬ КАТЕГОРИЮ</string>
@@ -18,7 +19,7 @@
     <string name="labelEnterCategory">Введите название категории</string>
     <string name="labelEnterNameMovie">Введите название фильма</string>
     <string name="labelEnterNumberCategory">Введите номер категории</string>
-    <string name="labelEnterDurationMovie">Введите продолжительность фильма</string>
+    <string name="labelEnterRatingMovie">Введите рейтинг фильма</string>
 
     <string name="deleteAllCategories">УДАЛИТЬ ВСЕ КАТЕГОРИИ</string>
     <string name="deleteAllMovies">УДАЛИТЬ ВСЕ ФИЛЬМЫ</string>

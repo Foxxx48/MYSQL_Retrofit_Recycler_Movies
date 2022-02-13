@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/GFox/AndroidStudioProjects/MYSQL_Retrofit_Recycler_Movies/app/src/main/res/layout/activity_main.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/GFox/AndroidStudioProjects/MYSQL_Retrofit_Recycler_Movies/app/src/main/res/layout/catalog_films.xml" value="0.1" />
+        <entry key="..\:/Users/GFox/AndroidStudioProjects/MYSQL_Retrofit_Recycler_Movies/app/src/main/res/layout/movies_item.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/GFox/AndroidStudioProjects/MYSQL_Retrofit_Recycler_Movies/app/src/main/res/layout/panel.xml" value="0.25" />
+        <entry key="..\:/Users/GFox/AndroidStudioProjects/MYSQL_Retrofit_Recycler_Movies/app/src/main/res/layout/panel_edit_category.xml" value="0.1" />
+        <entry key="..\:/Users/GFox/AndroidStudioProjects/MYSQL_Retrofit_Recycler_Movies/app/src/main/res/layout/panel_edit_movie.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/GFox/AndroidStudioProjects/MYSQL_Retrofit_Recycler_Movies/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
         <entry key="..\:/Users/dzuba/Downloads/MYSQL+Retrofit+Recycler_Movies/app/src/main/res/drawable/catalog_clothes.xml" value="0.129" />
         <entry key="..\:/Users/dzuba/Downloads/MYSQL+Retrofit+Recycler_Movies/app/src/main/res/layout/activity_main.xml" value="0.10443995963673057" />
         <entry key="..\:/Users/dzuba/Downloads/MYSQL+Retrofit+Recycler_Movies/app/src/main/res/layout/catalog_categories.xml" value="0.10443995963673057" />
